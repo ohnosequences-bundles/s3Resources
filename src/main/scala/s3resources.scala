@@ -1,4 +1,4 @@
-package ohnosequences-bundles.statika
+package ohnosequencesBundles.statika
 
 import ohnosequences.statika.bundles._
 
@@ -12,7 +12,7 @@ case object s3resources {
 
     lazy val baseS3URL: URL = new URL("https://s3-eu-west-1.amazonaws.com/resources.ohnosequences.com")
 
-    final def downloadTo(relativeURL: URL, file: File): Unit = 
+    final def downloadTo(relativeURL: String, file: File): Unit = 
       new URL(baseS3URL, relativeURL) #> file !!
   }
 
